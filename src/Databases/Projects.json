@@ -1,0 +1,220 @@
+[
+  {
+    "id": "1",
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80",
+          "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "2",
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1542359498-13ebad248020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+          "https://images.unsplash.com/photo-1542359498-13ebad248020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+          "https://images.unsplash.com/photo-1542359498-13ebad248020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+          "https://images.unsplash.com/photo-1542359498-13ebad248020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+          "https://images.unsplash.com/photo-1542359498-13ebad248020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+          "https://images.unsplash.com/photo-1542359498-13ebad248020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "3",
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1496564203457-11bb12075d90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1850&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "4",
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1430417934865-589b63ad5c00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "5",
+
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1524190952534-79b1f7d6ad5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "6",
+
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1524190952534-79b1f7d6ad5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "7",
+
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1524190952534-79b1f7d6ad5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "8",
+
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1524190952534-79b1f7d6ad5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "9",
+
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1524190952534-79b1f7d6ad5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  },
+  {
+    "id": "10",
+
+    "photos": [
+      {
+        "mainPhoto": "https://images.unsplash.com/photo-1524190952534-79b1f7d6ad5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80",
+        "photoGallery": [
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+          "https://images.unsplash.com/photo-1616046330109-09ee9e34be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
+        ]
+      }
+    ],
+    "title": "Teixeira Design",
+    "year": "2020",
+    "location": "İstanbul",
+    "client": "Real Group",
+    "function": "Sale Office"
+  }
+]
