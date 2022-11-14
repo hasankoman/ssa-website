@@ -40,7 +40,7 @@ export default function Header() {
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
-      if (location.pathname === "/") {
+      if (location.pathname === "/ssa-website") {
         if (latest >= height) {
           setShow(true);
         }
@@ -126,7 +126,7 @@ export default function Header() {
         <div
           className={`text-white absolute transition-all duration-1000 delay-500 w-[168px] z-50 bg-black pl-4`}
         >
-          <Link to={"/"} className={`h-full`}>
+          <Link to={"/ssa-website"} className={`h-full`}>
             <div className="">
               <div className="font-ssa text-6xl text-center">SSA</div>
             </div>
@@ -148,25 +148,25 @@ export default function Header() {
               className="nav-link !text-black tracking-widest before:!bg-black"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Link to="/">Home</Link>
+              <Link to="/ssa-website">Home</Link>
             </li>
             <li
               className="nav-link !text-black tracking-widest before:!bg-black"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Link to="/about">About</Link>
+              <Link to="/ssa-website/about">About</Link>
             </li>
             <li
               className="nav-link !text-black tracking-widest "
               onClick={() => setIsMenuOpen(false)}
             >
-              <Link to="/projects">Projects</Link>
+              <Link to="/ssa-website/projects">Projects</Link>
             </li>
             <li
               className="nav-link !text-black tracking-widest before:!bg-black "
               onClick={() => setIsMenuOpen(false)}
             >
-              <Link to="/contact">Contact</Link>
+              <Link to="/ssa-website/contact">Contact</Link>
             </li>
           </ul>
         </motion.div>

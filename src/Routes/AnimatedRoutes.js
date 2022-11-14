@@ -12,10 +12,10 @@ const AnimatedRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<App />}>
+      <Route path="/ssa-website" element={<App />}>
         <Route path="" element={<Home />} />
       </Route>
-      <Route path="projects" element={<Projects />}>
+      <Route path="/ssa-website/projects" element={<Projects />}>
         <Route path="" element={<ProjectLayer />} />
         <Route path=":projectId" element={<Project />} />
       </Route>

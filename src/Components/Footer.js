@@ -21,16 +21,16 @@ export default function Footer() {
           <h2 className=" text-lg underline tracking-widest">MENU</h2>
           <ul className={`flex flex-col gap-3 `}>
             <li className="footer-link">
-              <Link to="/">Home</Link>
+              <Link to="ssa-website">Home</Link>
             </li>
             <li className="footer-link">
-              <Link to="/about">About</Link>
+              <Link to="about">About</Link>
             </li>
             <li className="footer-link">
-              <Link to="/projects">Projects</Link>
+              <Link to="projects">Projects</Link>
             </li>
             <li className="footer-link ">
-              <Link to="/contact">Contact</Link>
+              <Link to="contact">Contact</Link>
             </li>
           </ul>
         </div>
