@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/ssa-website/static/css/main.5f7f51a8.css",
-    "main.js": "/ssa-website/static/js/main.20f1ec25.js",
+    "main.css": "/ssa-website/static/css/main.b1ce88da.css",
+    "main.js": "/ssa-website/static/js/main.399d445f.js",
     "static/media/about-bg.jpg": "/ssa-website/static/media/about-bg.b882c16e6807194a104a.jpg",
     "static/media/logo-bg-0.avif": "/ssa-website/static/media/logo-bg-0.1ab49a350dc92bfe99b3.avif",
     "static/media/logo-bg-1.avif": "/ssa-website/static/media/logo-bg-1.69a75ee75abb33b6258c.avif",
     "static/media/logo-bg-3.avif": "/ssa-website/static/media/logo-bg-3.f478393099b2299d313d.avif",
     "static/media/logo-bg-2.avif": "/ssa-website/static/media/logo-bg-2.806d63ea9359de9e2f47.avif",
-    "static/media/instagram-logo.png": "/ssa-website/static/media/instagram-logo.b608d44222b6d86c2320.png",
     "static/media/architects_draft-webfont.woff": "/ssa-website/static/media/architects_draft-webfont.e3e081ba79aae64a45c4.woff",
     "static/media/architects_draft-webfont.woff2": "/ssa-website/static/media/architects_draft-webfont.2ac0da1771c44988158d.woff2",
+    "static/media/slick.svg": "/ssa-website/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ssa-website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ssa-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/ssa-website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ssa-website/index.html",
-    "main.5f7f51a8.css.map": "/ssa-website/static/css/main.5f7f51a8.css.map",
-    "main.20f1ec25.js.map": "/ssa-website/static/js/main.20f1ec25.js.map"
+    "main.b1ce88da.css.map": "/ssa-website/static/css/main.b1ce88da.css.map",
+    "main.399d445f.js.map": "/ssa-website/static/js/main.399d445f.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f7f51a8.css",
-    "static/js/main.20f1ec25.js"
+    "static/css/main.b1ce88da.css",
+    "static/js/main.399d445f.js"
   ]
 }
