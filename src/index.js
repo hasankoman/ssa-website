@@ -4,10 +4,10 @@ import App from "./App";
 import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import {
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import AnimatedRoutes from "./Routes/AnimatedRoutes";
+import "../node_modules/slick-carousel/slick/slick.css";
+import "../node_modules/slick-carousel/slick/slick-theme.css";
 // ..
 AOS.init();
 

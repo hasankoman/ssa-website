@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import instagram from "../Assets/Images/instagram-logo.png";
 
 export default function Footer() {
   return (
-    <div className="py-12 mx-10 mt-24 ">
+    <div className="py-12 mx-10 mt-24 overflow-hidden">
       <div className="grid grid-cols-8 gap-10 h-full place-content-center">
         <div className="col-span-2 border-r">
           <Link to={"/"} className={``}>
@@ -21,7 +20,7 @@ export default function Footer() {
           <h2 className=" text-lg underline tracking-widest">MENU</h2>
           <ul className={`flex flex-col gap-3 `}>
             <li className="footer-link">
-              <Link to="ssa-website">Home</Link>
+              <Link to="/ssa-website">Home</Link>
             </li>
             <li className="footer-link">
               <Link to="about">About</Link>
@@ -37,19 +36,21 @@ export default function Footer() {
         <div className="col-span-2 flex flex-col gap-6 border-r">
           <h2 className=" text-lg underline tracking-widest ">CONTACT</h2>
           <div>
-            <span>Email: </span>
-            <span className="font-normal">info@ssaarch.com</span>
+            <a href="mailto:info@ssaarch.com">
+              <span className="font-normal ">info@ssaarch.com</span>
+            </a>
           </div>
           <div>
-            <span>Phone Number: </span>
-            <span className="font-normal">1234 567 89 10</span>
+            <a href="tel:1234 567 89 10">
+              <span className="font-normal">1234 567 89 10</span>
+            </a>
           </div>
           <div>
-            <span>Address: </span>
-
-            <span className="font-normal">
-              Bankalar Cd. No:19 Voyvoda Han 306, İstanbul
-            </span>
+            <a href="/ssa-website/contact">
+              <span className="font-normal">
+                Bankalar Cd. No:19 Voyvoda Han 306, İstanbul
+              </span>
+            </a>
           </div>
         </div>
         <div className=" col-span-1 flex flex-col gap-6">

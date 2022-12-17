@@ -6,6 +6,7 @@ import Projects from "../Pages/Projects";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import ProjectLayer from "../Layers/ProjectLayer";
+import Contact from "../Pages/Contact";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -19,6 +20,8 @@ const AnimatedRoutes = () => {
         <Route path="" element={<ProjectLayer />} />
         <Route path=":projectId" element={<Project />} />
       </Route>
+      <Route path="/ssa-website/about" element={<About />} />
+      <Route path="/ssa-website/contact" element={<Contact />} />
     </Routes>
   );
 };

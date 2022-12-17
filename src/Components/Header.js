@@ -40,13 +40,13 @@ export default function Header() {
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
+      console.log(location.pathname);
       if (location.pathname === "/ssa-website") {
         if (latest >= height) {
           setShow(true);
         }
         if (latest < height) {
           setShow(false);
-
           setIsMenuOpen(false);
         }
       }
@@ -57,6 +57,12 @@ export default function Header() {
     if (location.pathname.includes("projects")) {
       setOnLocation("PROJECTS");
       setShow(true);
+    } else if (location.pathname.includes("about")) {
+      setOnLocation("ABOUT");
+      setShow(true);
+    } else if (location.pathname.includes("contact")) {
+      setOnLocation("CONTACT");
+      setShow(true);
     } else {
       setOnLocation("HOME");
       setShow(false);
@@ -65,12 +71,12 @@ export default function Header() {
 
   return (
     <header
-      className={`flex justify-start  items-center w-full sticky top-0 self-start z-50  `}
+      className={`flex justify-start   items-center w-full sticky top-0 self-start z-50  `}
     >
       <motion.div
-        className={`  h-[135px] relative flex items-center  `}
+        className={`  h-[135px] relative  flex items-center  `}
         animate={{
-          width: show ? "60%" : "10%",
+          width: show ? "100%" : "10%",
           transition: { duration: 1 },
         }}
         initial={{ width: "50%" }}
@@ -89,6 +95,7 @@ export default function Header() {
           overflow="visible"
           xmlSpace="preserve"
           preserveAspectRatio="none"
+          className="max-w-[1296px] z-20"
         >
           <rect
             fill="#000"
@@ -98,7 +105,6 @@ export default function Header() {
             height="200"
           />
         </svg>
-
         <svg
           version="1.1"
           baseProfile="tiny"
@@ -113,7 +119,7 @@ export default function Header() {
           viewBox="0 0 200 160"
           overflow="visible"
           xmlSpace="preserve"
-          className=""
+          className="max-w-[168.75px] z-20"
         >
           <path fill="#000" stroke="#000" stroke-miterlimit="10" d="M200,0" />
           <path
@@ -132,17 +138,41 @@ export default function Header() {
             </div>
           </Link>
         </div>
+        <div className="w-full max-w-[1296px] absolute h-full bg-transparent flex justify-end items-center z-20">
+          <motion.button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white text-xl justify-center items-center gap-3 flex  "
+            animate={controls}
+            transition={{
+              duration: 1,
+              x: {
+                duration: 0.5,
+              },
+            }}
+            whileHover={{ x: isMenuOpen ? -10 : 10 }}
+          >
+            {onLocation}
+            <motion.i
+              animate={{
+                rotate: isMenuOpen ? -180 : 0,
+                transition: { duration: 1 },
+              }}
+              className={`fa-regular fa-circle-right text-lg`}
+            ></motion.i>
+          </motion.button>
+        </div>
+      </motion.div>
+      <div className="w-full min-w-[750px]   h-[135px] bg-transparent flex justify-end items-center ">
         <motion.div
-          className="bg-white  w-[1000px] h-full absolute right-0  flex justify-end items-center  project-shadow -z-10"
-          initial={{ x: "-50%" }}
+          className={`bg-white w-full h-full flex justify-end items-center  project-shadow  z-10`}
           animate={{
             opacity: isMenuOpen ? 0.7 : 0,
-            x: isMenuOpen ? "78%" : "-50%",
+            x: isMenuOpen ? "0" : "-100%",
             transition: { duration: 1 },
           }}
         >
           <ul
-            className={`flex   gap-5 transition-all duration-1000 delay-500 text-lg pr-10 `}
+            className={`flex   gap-5 transition-all duration-1000 delay-500 text-lg px-10 `}
           >
             <li
               className="nav-link !text-black tracking-widest before:!bg-black"
@@ -170,28 +200,7 @@ export default function Header() {
             </li>
           </ul>
         </motion.div>
-        <motion.button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="text-white right-0 absolute text-xl justify-center items-center gap-3 flex "
-          animate={controls}
-          transition={{
-            duration: 1,
-            x: {
-              duration: 0.5,
-            },
-          }}
-          whileHover={{ x: isMenuOpen ? -10 : 10 }}
-        >
-          {onLocation}
-          <motion.i
-            animate={{
-              rotate: isMenuOpen ? -180 : 0,
-              transition: { duration: 1 },
-            }}
-            className={`fa-regular fa-circle-right text-lg`}
-          ></motion.i>
-        </motion.button>
-      </motion.div>
+      </div>
     </header>
   );
 }

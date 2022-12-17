@@ -20,7 +20,6 @@ export default function Home() {
       <Logo canScroll={canScroll} />
       <Header />
       <HomePage />
-      
     </main>
   );
 }
