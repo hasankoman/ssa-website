@@ -12,18 +12,21 @@ const variants = {
     return {
       x: direction > 0 ? "100%" : "-100%",
       opacity: 0,
+      scale: 0,
     };
   },
   center: {
     zIndex: 1,
     x: 0,
     opacity: 1,
+    scale: 1,
   },
   exit: (direction) => {
     return {
       zIndex: 0,
       x: direction < 0 ? "100%" : "-100%",
       opacity: 0,
+      scale: 0,
     };
   },
 };
@@ -42,7 +45,6 @@ export default function About() {
   };
 
   const otherPaginate = (newDirection) => {
-    console.log(newDirection);
     if (newDirection > page) {
       setPage([newDirection, 1]);
     }
@@ -75,6 +77,7 @@ export default function About() {
             transition={{
               x: { type: "tween", stiffness: 1000, damping: 30, duration: 1 },
               opacity: { duration: 1 },
+              scale: { duration: 1 },
             }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}

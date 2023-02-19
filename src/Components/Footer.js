@@ -1,11 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div className="py-12 mx-10 mt-24 overflow-hidden">
-      <div className="grid grid-cols-8 gap-10 h-full place-content-center">
-        <div className="col-span-2 border-r">
+    <div
+      className={`py-12  ${
+        window.location.pathname === "/ssa-website" ? "" : "pb-[135px]"
+      } mx-6 mt-24 overflow-hidden`}
+    >
+      <div className="grid lg:grid-cols-8 grid-cols-1 gap-10 h-full place-content-center">
+        <div className="lg:col-span-2 col-span-1 lg:border-r">
           <Link to={"/"} className={``}>
             <div className="text-6xl font-bold custom-border before:h-1 items-start flex flex-col justify-start tracking-widest pb-3">
               <span className="font-ssa ">SSA</span>
@@ -16,24 +27,24 @@ export default function Footer() {
             </div>
           </Link>
         </div>
-        <div className="col-span-2 flex flex-col gap-6 border-r">
+        <div className="lg:col-span-2  col-span-1  flex flex-col gap-6 lg:border-r">
           <h2 className=" text-lg underline tracking-widest">MENU</h2>
           <ul className={`flex flex-col gap-3 `}>
             <li className="footer-link">
               <Link to="/ssa-website">Home</Link>
             </li>
             <li className="footer-link">
-              <Link to="about">About</Link>
+              <Link to="/ssa-website/about">About</Link>
             </li>
             <li className="footer-link">
-              <Link to="projects">Projects</Link>
+              <Link to="/ssa-website/project">Projects</Link>
             </li>
             <li className="footer-link ">
-              <Link to="contact">Contact</Link>
+              <Link to="/ssa-website/contact">Contact</Link>
             </li>
           </ul>
         </div>
-        <div className="col-span-2 flex flex-col gap-6 border-r">
+        <div className="lg:col-span-2  col-span-1 flex flex-col gap-6 lg:border-r">
           <h2 className=" text-lg underline tracking-widest ">CONTACT</h2>
           <div>
             <a href="mailto:info@ssaarch.com">
@@ -53,7 +64,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className=" col-span-1 flex flex-col gap-6">
+        <div className=" lg:col-span-2 col-span-1  flex flex-col gap-6">
           <h2 className=" text-lg underline tracking-widest ">SOCIAL MEDIA</h2>
           <div className="flex flex-row gap-3 text-black text-3xl ">
             <div className="opacity-50 hover:opacity-100 transition-all duration-500">

@@ -4,6 +4,7 @@ import img1 from "../Assets/Images/logo-bg-1.avif";
 import img2 from "../Assets/Images/logo-bg-2.avif";
 import img3 from "../Assets/Images/logo-bg-3.avif";
 import { motion, useScroll, useTransform } from "framer-motion";
+
 export default function Logo({ canScroll }) {
   const [refHeight, setRefHeight] = useState();
   const [image, setImage] = useState(img0);
@@ -103,7 +104,7 @@ export default function Logo({ canScroll }) {
 
       <a
         className={`absolute bottom-0 text-6xl mb-5 animate-bounce transition-opacity duration-700  ${
-          scrollY.current > 0 ? "opacity-0 pointer-events-none" : "opacity-100"
+          scrollY > 0 ? "opacity-0 pointer-events-none" : "opacity-100"
         } `}
         href="#about"
       >

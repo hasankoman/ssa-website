@@ -40,7 +40,6 @@ export default function Header() {
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
-      console.log(location.pathname);
       if (location.pathname === "/ssa-website") {
         if (latest >= height) {
           setShow(true);
@@ -141,7 +140,7 @@ export default function Header() {
         <div className="w-full max-w-[1296px] absolute h-full bg-transparent flex justify-end items-center z-20">
           <motion.button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white text-xl justify-center items-center gap-3 flex  "
+            className="text-white  text-xl justify-center items-center gap-3 flex  "
             animate={controls}
             transition={{
               duration: 1,
@@ -151,7 +150,7 @@ export default function Header() {
             }}
             whileHover={{ x: isMenuOpen ? -10 : 10 }}
           >
-            {onLocation}
+            <span className="header-location">{onLocation}</span>
             <motion.i
               animate={{
                 rotate: isMenuOpen ? -180 : 0,
@@ -162,20 +161,20 @@ export default function Header() {
           </motion.button>
         </div>
       </motion.div>
-      <div className="w-full min-w-[750px]   h-[135px] bg-transparent flex justify-end items-center ">
+      <div className="w-full  sm:min-w-[300px] md:min-w-[450px] lg:min-w-[700px]   h-[135px] bg-transparent flex justify-end items-center ">
         <motion.div
-          className={`bg-white w-full h-full flex justify-end items-center  project-shadow  z-10`}
+          className={`bg-white header-mobile-links w-full h-full flex justify-end items-center  project-shadow  z-10`}
           animate={{
-            opacity: isMenuOpen ? 0.7 : 0,
+            opacity: isMenuOpen ? 1 : 0,
             x: isMenuOpen ? "0" : "-100%",
             transition: { duration: 1 },
           }}
         >
           <ul
-            className={`flex   gap-5 transition-all duration-1000 delay-500 text-lg px-10 `}
+            className={`flex flex-col lg:flex-row  gap-5 transition-all duration-1000 delay-500 text-lg px-10 `}
           >
             <li
-              className="nav-link !text-black tracking-widest before:!bg-black"
+              className={`nav-link !text-black tracking-widest before:!bg-black  `}
               onClick={() => setIsMenuOpen(false)}
             >
               <Link to="/ssa-website">Home</Link>

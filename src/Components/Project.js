@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useWindowHeight } from "@react-hook/window-size";
 import { Link, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import LazyLoad from "react-lazyload";
 
 export default function Project({
   images,
@@ -49,15 +50,17 @@ export default function Project({
           exit={{}}
           className="w-full mx-auto projects-item  rounded-3xl bg-slate-200 overflow-hidden bg-opacity-90  project-shadow transition-all duration-[2000ms]"
         >
-          <motion.img
-            src={images.landspace}
-            alt=""
-            variants={container}
-            animate="initial"
-            whileHover="hover"
-            whileTap="tap"
-            className="h-full w-full rounded-3xl object-center object-cover"
-          />
+          <LazyLoad once={true} placeholder={<p>Loading...</p>}>
+            <motion.img
+              src={images.landspace}
+              alt=""
+              variants={container}
+              animate="initial"
+              whileHover="hover"
+              whileTap="tap"
+              className="h-full w-full rounded-3xl object-center object-cover"
+            />
+          </LazyLoad>
         </motion.div>
         <AnimatePresence initial={false} wait>
           <motion.div

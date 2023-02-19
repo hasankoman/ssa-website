@@ -10,7 +10,7 @@ import Projects from "./Projects";
 export default function Home() {
   return (
     <main className="relative">
-      <div className="-translate-y-[135px] bg-white overflow-y-hidden ">
+      <div className="-translate-y-[135px] bg-white overflow-hidden ">
         <About />
         <Footer />
       </div>

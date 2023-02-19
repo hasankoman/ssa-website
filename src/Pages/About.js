@@ -9,15 +9,15 @@ export default function About() {
       <main className="relative  ">
         <div className="overflow-y-hidden">
           <div className=" w-11/12 mx-auto mt-32 ">
-            <div className="pb-16 border-b flex">
-              <div className="w-1/2">
+            <div className="pb-16 border-b grid grid-cols-1  md:grid-cols-2 gap-8 md:gap-16 ">
+              <div className="col-span-1 ">
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
                   alt=""
                   className="w-full"
                 />
               </div>
-              <div className="w-1/2 text-right min-h-full flex ml-16 justify-center items-center text-2xl">
+              <div className="col-span-1  md:text-right min-h-full flex  justify-center items-center text-2xl">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Exercitationem inventore obcaecati sed, aperiam repellendus
                 accusantium, nisi ipsum expedita sequi nesciunt impedit itaque
@@ -34,8 +34,8 @@ export default function About() {
             </div>
             <div className="mt-16 pb-16 border-b">
               <h2 className="text-3xl font-semibold">Partners</h2>
-              <ul className="w-full grid grid-cols-3 my-16 grid-rows-1 ">
-                <li className="col-span-1 row-span-1 flex justify-start items-center px-2 border-l flex-col">
+              <ul className="w-full grid grid-cols-1 xl:grid-cols-3 my-16 grid-rows-1 ">
+                <li className="col-span-1 row-span-1 flex justify-start items-center py-5 lg:px-5  lg:py-0  flex-col">
                   <div className="w-10/12 flex justify-center items-center border-b pb-8">
                     <img
                       src="https://randomuser.me/api/portraits/women/68.jpg"
@@ -52,7 +52,7 @@ export default function About() {
                     </p>
                   </div>
                 </li>
-                <li className="col-span-1 row-span-1 flex justify-start items-center px-2 border-x flex-col">
+                <li className="col-span-1 row-span-1 flex justify-start items-center py-5 lg:px-5 lg:py-0 lg:border-x flex-col">
                   <div className="w-10/12 flex justify-center items-center border-b pb-8">
                     <img
                       src="https://randomuser.me/api/portraits/women/68.jpg"
@@ -69,7 +69,7 @@ export default function About() {
                     </p>
                   </div>
                 </li>
-                <li className="col-span-1 row-span-1 flex justify-start items-center px-2 border-r flex-col">
+                <li className="col-span-1 row-span-1 flex justify-start items-center py-5 lg:px-5  lg:py-0 flex-col">
                   <div className="w-10/12 flex justify-center items-center border-b pb-8">
                     <img
                       src="https://randomuser.me/api/portraits/women/68.jpg"

@@ -68,8 +68,8 @@ export default function Project() {
           </motion.div>
         </motion.div>
       </motion.div>
-      <div className="w-full flex pb-10 border-b z-50">
-        <div className="w-1/4 flex flex-col mt-5 mx-6 gap-y-4 border-r pr-4">
+      <div className="w-full grid grid-cols-1 md:grid-cols-6 pb-10 border-b z-50">
+        <div className=" flex flex-col col-span-1 md:col-span-2 mt-5 mx-6 gap-y-4 md:border-r px-8 md:pr-4">
           <div className="flex flex-col ">
             <span className="project-header ">Title</span>
             <span className="project-text border-b w-full flex justify-center items-center">
@@ -95,17 +95,20 @@ export default function Project() {
             </span>
           </div>
         </div>
-        <div className="w-3/4 grid grid-cols-4 gap-8 my-5">
-          {projects[0].photos[0]["photoGallery"].map((photoUrl) => {
+        <div className=" col-span-1 md:col-span-4 grid grid-cols-1 sm:grid-cols-4 xl:grid-cols-3 gap-8 my-5 px-8 md:pr-8 ">
+          {projects[0].photos[0]["photoGallery"].map((photoUrl, index) => {
             return (
-              <div className="col-span-1 " onClick={() => setIsOpen(true)}>
+              <div
+                key={index}
+                className="col-span-1 sm:col-span-2 xl:col-span-1"
+                onClick={() => setIsOpen(true)}
+              >
                 <img src={photoUrl} className="w-full " alt="" />
               </div>
             );
           })}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

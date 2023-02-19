@@ -148,6 +148,24 @@ html {
 .nav-link a {
   padding: 0.6rem 1rem;
 }
+
+/* .nav-link.active::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  font-weight: bolder;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  width: 100%;
+  left: 0;
+  
+} */
+
 .nav-link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -259,4 +277,20 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-location {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-location {
+    display: none;
+  }
+  .header-mobile-links {
+    transform: translateX(-100%) translateY(50%) !important;
+    height: 100vh;
+  }
 }
