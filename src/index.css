@@ -143,6 +143,10 @@ html {
   text-decoration: none;
 
   display: inline-block;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   position: relative;
 }
 .nav-link a {
@@ -277,20 +281,4 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .header-location {
-    display: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .header-location {
-    display: none;
-  }
-  .header-mobile-links {
-    transform: translateX(-100%) translateY(50%) !important;
-    height: 100vh;
-  }
 }

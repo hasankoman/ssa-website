@@ -37,7 +37,7 @@ export default function Footer() {
               <Link to="/ssa-website/about">About</Link>
             </li>
             <li className="footer-link">
-              <Link to="/ssa-website/project">Projects</Link>
+              <Link to="/ssa-website/projects">Projects</Link>
             </li>
             <li className="footer-link ">
               <Link to="/ssa-website/contact">Contact</Link>
@@ -70,7 +70,9 @@ export default function Footer() {
             <div className="opacity-50 hover:opacity-100 transition-all duration-500">
               <a
                 href="https://www.instagram.com/sophisticatedsolutions_arch/"
+                target="_blank"
                 className="p-2 "
+                rel="noreferrer"
               >
                 <i class="fa-brands fa-instagram"></i>
               </a>

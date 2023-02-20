@@ -50,22 +50,23 @@ export default function Project({
           exit={{}}
           className="w-full mx-auto projects-item  rounded-3xl bg-slate-200 overflow-hidden bg-opacity-90  project-shadow transition-all duration-[2000ms]"
         >
-          <LazyLoad once={true} placeholder={<p>Loading...</p>}>
-            <motion.img
-              src={images.landspace}
-              alt=""
-              variants={container}
-              animate="initial"
-              whileHover="hover"
-              whileTap="tap"
-              className="h-full w-full rounded-3xl object-center object-cover"
-            />
-          </LazyLoad>
+          <motion.img
+            src={images.landspace}
+            alt=""
+            variants={container}
+            animate="initial"
+            whileHover="hover"
+            whileTap="tap"
+            className="h-full w-full rounded-3xl object-center object-cover"
+          />
         </motion.div>
         <AnimatePresence initial={false} wait>
           <motion.div
             exit={{ opacity: 0 }}
-            transition={{ duration: 2, ease: [0.43, 0.13, 0.23, 0.96] }}
+            transition={{
+              duration: 2,
+              ease: [0.43, 0.13, 0.23, 0.96],
+            }}
             className="flex justify-center items-center"
           >
             <span className="text-2xl">{title}</span>

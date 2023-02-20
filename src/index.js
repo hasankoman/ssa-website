@@ -8,14 +8,18 @@ import { BrowserRouter } from "react-router-dom";
 import AnimatedRoutes from "./Routes/AnimatedRoutes";
 import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
+import { Provider } from "react-redux";
+import { store } from "./store";
 // ..
 AOS.init();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <AnimatedRoutes />
-    </BrowserRouter>
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <AnimatedRoutes />
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>
 );
