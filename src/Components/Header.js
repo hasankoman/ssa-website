@@ -4,33 +4,34 @@ import { useWindowWidth } from "@react-hook/window-size";
 import { Link, useLocation } from "react-router-dom";
 import { motion, useAnimationControls, useScroll } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleIsMenuOpen } from "../Helpers/storeSlice";
+import { toggleIsMenuOpen, toggleShow } from "../Helpers/storeSlice";
 
 export default function Header() {
   const height = useWindowHeight();
   const width = useWindowWidth();
   const location = useLocation();
   // const [isMenuOpen, dispatch(toggleIsMenuOpen())] = useState(false);
-  const [onLocation, setOnLocation] = useState("HOME");
+  const [onLocation, setOnLocation] = useState("");
   const { scrollY } = useScroll();
-  const [show, setShow] = useState(false);
+
   const controls = useAnimationControls();
   const [animateHeader, setAnimateHeader] = useState();
   const [isMobile, setIsMobile] = useState(false);
-  const { isMenuOpen } = useSelector((state) => state.general);
+  const { isMenuOpen, show } = useSelector((state) => state.general);
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (scrollY.current > height) {
-      setShow(true);
+      dispatch(toggleShow(true));
     } else {
-      setShow(false);
+      dispatch(toggleShow(false));
     }
-  }, []);
+  }, [scrollY, height, dispatch]);
 
   useEffect(() => {
     if (width > 1100) {
       setIsMobile(false);
+      console.log(show);
       setAnimateHeader({
         width: show ? "70%" : "10%",
         transition: { duration: 1 },
@@ -46,10 +47,10 @@ export default function Header() {
 
   useEffect(() => {
     if (show) {
-      controls.start({ opacity: 1, paddingRight: "15px" });
+      controls.start({ opacity: 1 });
     }
     if (!show) {
-      controls.start({ opacity: 0, paddingRight: 0 });
+      controls.start({ opacity: 0 });
     }
   }, [show]);
 
@@ -57,31 +58,38 @@ export default function Header() {
     return scrollY.onChange((latest) => {
       if (location.pathname === "/ssa-website") {
         if (latest >= height) {
-          setShow(true);
+          dispatch(toggleShow(true));
         }
         if (latest < height) {
-          setShow(false);
-          dispatch(toggleIsMenuOpen())(false);
+          dispatch(toggleShow(false));
+          dispatch(toggleIsMenuOpen(false));
         }
       }
     });
-  }, []);
+  });
 
   useEffect(() => {
     if (location.pathname.includes("projects")) {
       setOnLocation("PROJECTS");
-      setShow(true);
+      dispatch(toggleIsMenuOpen(true));
+      dispatch(toggleShow(true));
     } else if (location.pathname.includes("about")) {
       setOnLocation("ABOUT");
-      setShow(true);
+      dispatch(toggleIsMenuOpen(true));
+      dispatch(toggleShow(true));
     } else if (location.pathname.includes("contact")) {
       setOnLocation("CONTACT");
-      setShow(true);
+      dispatch(toggleIsMenuOpen(true));
+      dispatch(toggleShow(true));
     } else {
       setOnLocation("HOME");
-      setShow(false);
+      dispatch(toggleIsMenuOpen(false));
+      dispatch(toggleShow(false));
     }
-  }, []);
+    width < 1100 && isMenuOpen
+      ? dispatch(toggleIsMenuOpen(false))
+      : dispatch(toggleIsMenuOpen(true));
+  }, [dispatch, location]);
 
   const mobileHeader = (
     <header
@@ -151,24 +159,31 @@ export default function Header() {
         </div>
         <div className="w-full max-w-[1296px] absolute  h-full bg-transparent flex justify-end items-center z-20">
           <motion.button
-            onClick={() => dispatch(toggleIsMenuOpen())}
-            className="text-white  text-xl justify-center items-center gap-3 flex  "
-            animate={controls}
+            onClick={() => dispatch(toggleIsMenuOpen(!isMenuOpen))}
+            className="text-white  text-xl justify-center items-center gap-3 flex overflow-hidden "
+            animate={{
+              opacity: show ? 1 : 0,
+              x: isMenuOpen ? "-30px" : "20px",
+            }}
             transition={{
               duration: 1,
-              x: {
-                duration: 0.5,
-              },
             }}
-            whileHover={{ x: isMenuOpen ? -10 : 10 }}
           >
             <motion.span
-              className={`header-location ${width < 576 ? "hidden" : ""} `}
-              // initial={{ opacity: isMenuOpen ? 1 : 0 }}
-              // animate={{
-              //   opacity: isMenuOpen ? 1 : 0,
-              //   transition: { duration: 1 },
-              // }}
+              className={`header-location  ${width < 576 ? "!hidden" : ""} `}
+              initial={{
+                // x: isMenuOpen ? "100%" : "0",
+                opacity: isMenuOpen ? 0 : 1,
+                pointerEvents: isMenuOpen ? "none" : "auto",
+                cursor: isMenuOpen ? "default" : "pointer",
+              }}
+              animate={{
+                x: isMenuOpen ? "100%" : "0",
+                opacity: isMenuOpen ? 0 : 1,
+                pointerEvents: isMenuOpen ? "none" : "auto",
+                cursor: isMenuOpen ? "default" : "pointer",
+                transition: { duration: 1 },
+              }}
             >
               {onLocation}
             </motion.span>
@@ -176,9 +191,9 @@ export default function Header() {
               animate={{
                 rotate: isMenuOpen ? -180 : 0,
                 transition: { duration: 1 },
-                x: width < 576 ? "60px" : "",
               }}
-              className={`fa-solid fa-bars-staggered text-lg  `}
+              className={`fa-solid fa-bars-staggered text-lg
+               `}
             ></motion.i>
           </motion.button>
         </div>
@@ -209,27 +224,49 @@ export default function Header() {
           >
             <li
               className={`nav-link !text-black tracking-widest before:!bg-black  `}
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website">Home</Link>
+              <Link
+                className={`${onLocation === "HOME" ? "font-semibold" : ""}`}
+                to="/ssa-website"
+              >
+                Home
+              </Link>
             </li>
             <li
               className="nav-link !text-black tracking-widest before:!bg-black"
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website/about">About</Link>
+              <Link
+                className={`${onLocation === "ABOUT" ? "font-semibold" : ""}`}
+                to="/ssa-website/about"
+              >
+                About
+              </Link>
             </li>
             <li
-              className="nav-link !text-black tracking-widest "
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              className="nav-link !text-black tracking-widest  "
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website/projects">Projects</Link>
+              <Link
+                className={`${
+                  onLocation === "PROJECTS" ? "font-semibold" : ""
+                }`}
+                to="/ssa-website/projects"
+              >
+                Projects
+              </Link>
             </li>
             <li
               className="nav-link !text-black tracking-widest before:!bg-black "
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website/contact">Contact</Link>
+              <Link
+                className={`${onLocation === "CONTACT" ? "font-semibold" : ""}`}
+                to="/ssa-website/contact"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </motion.div>
@@ -239,12 +276,12 @@ export default function Header() {
 
   const defaultHeader = (
     <header
-      className={`flex justify-start   items-center w-full sticky top-0 self-start z-50  `}
+      className={`flex justify-start items-center w-full sticky top-0 self-start z-50  `}
     >
       <motion.div
         className={`  h-[135px] relative  flex items-center  `}
         animate={animateHeader}
-        initial={{ width: "50%" }}
+        initial={{ width: show ? "70%" : "10%" }}
       >
         <svg
           version="1.1"
@@ -303,10 +340,13 @@ export default function Header() {
             </div>
           </Link>
         </div>
-        <div className="w-full max-w-[1296px] absolute h-full bg-transparent flex justify-end items-center z-20">
+        <div
+          className="w-full max-w-[1296px] absolute h-full bg-transparent flex justify-end items-center z-20"
+          style={{ right: "-47px" }}
+        >
           <motion.button
-            onClick={() => dispatch(toggleIsMenuOpen())}
-            className="text-white  text-xl justify-center items-center gap-3 flex  "
+            onClick={() => dispatch(toggleIsMenuOpen(!isMenuOpen))}
+            className="text-white overflow-hidden text-xl justify-center items-center gap-3 flex  "
             animate={controls}
             transition={{
               duration: 1,
@@ -314,15 +354,31 @@ export default function Header() {
                 duration: 0.5,
               },
             }}
-            whileHover={{ x: isMenuOpen ? -10 : 10 }}
           >
-            <span className="header-location">{onLocation}</span>
+            <motion.span
+              initial={{
+                x: isMenuOpen ? "100%" : "0",
+                opacity: isMenuOpen ? 0 : 1,
+                pointerEvents: isMenuOpen ? "none" : "auto",
+                cursor: isMenuOpen ? "default" : "pointer",
+              }}
+              animate={{
+                x: isMenuOpen ? "100%" : "0",
+                opacity: isMenuOpen ? 0 : 1,
+                pointerEvents: isMenuOpen ? "none" : "auto",
+                cursor: isMenuOpen ? "default" : "pointer",
+                transition: { duration: 1 },
+              }}
+              className="header-location"
+            >
+              {onLocation}
+            </motion.span>
             <motion.i
               animate={{
                 rotate: isMenuOpen ? -180 : 0,
                 transition: { duration: 1 },
               }}
-              className={`fa-regular fa-circle-right text-lg`}
+              className={`fa-regular fa-circle-right text-xl bg-black`}
             ></motion.i>
           </motion.button>
         </div>
@@ -330,38 +386,69 @@ export default function Header() {
       <div className="w-full  sm:min-w-[300px] md:min-w-[450px] lg:min-w-[700px]   h-[135px] bg-transparent flex justify-end items-center ">
         <motion.div
           className={`bg-white header-mobile-links w-full h-full flex justify-end items-center  project-shadow  z-10`}
+          initial={{
+            x: isMenuOpen ? "0" : "-100%",
+            opacity: isMenuOpen ? 1 : 0,
+          }}
           animate={{
             opacity: isMenuOpen ? 1 : 0,
             x: isMenuOpen ? "0" : "-100%",
-            transition: { duration: 1 },
+            transition: {
+              opacity: { duration: 0.7 },
+              x: {
+                duration: 1,
+              },
+            },
           }}
         >
           <ul
-            className={`flex flex-col lg:flex-row  gap-5 transition-all duration-1000 delay-500 text-lg px-10 `}
+            className={`flex flex-col lg:flex-row gap-3  transition-all duration-1000 delay-500 text-lg px-2 `}
           >
             <li
               className={`nav-link !text-black tracking-widest before:!bg-black  `}
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website">Home</Link>
+              <Link
+                className={`${onLocation === "HOME" ? "font-semibold" : ""}`}
+                to="/ssa-website"
+              >
+                Home
+              </Link>
             </li>
             <li
               className="nav-link !text-black tracking-widest before:!bg-black"
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website/about">About</Link>
+              <Link
+                className={`${onLocation === "ABOUT" ? "font-semibold" : ""}`}
+                to="/ssa-website/about"
+              >
+                About
+              </Link>
             </li>
             <li
-              className="nav-link !text-black tracking-widest "
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              className="nav-link !text-black tracking-widest  "
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website/projects">Projects</Link>
+              <Link
+                className={`${
+                  onLocation === "PROJECTS" ? "font-semibold" : ""
+                }`}
+                to="/ssa-website/projects"
+              >
+                Projects
+              </Link>
             </li>
             <li
               className="nav-link !text-black tracking-widest before:!bg-black "
-              onClick={() => dispatch(toggleIsMenuOpen())}
+              onClick={() => dispatch(toggleIsMenuOpen(isMenuOpen))}
             >
-              <Link to="/ssa-website/contact">Contact</Link>
+              <Link
+                className={`${onLocation === "CONTACT" ? "font-semibold" : ""}`}
+                to="/ssa-website/contact"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </motion.div>

@@ -96,8 +96,10 @@ export default function Logo({ canScroll }) {
         }}
         ref={logoTextRef}
       >
-        <div className="text-[350px] tracking-wider font-ssa">SSA</div>
-        <div className="text-6xl">
+        <div className="text-[140px] md:text-[225px] lg:text-[300px] sm:text-[175px] tracking-wider font-ssa">
+          SSA
+        </div>
+        <div className="lg:text-6xl text-2xl md:text-4xl sm:text-3xl">
           SOPHISTICATED SOLUTIONS <br />& ARCHITECTURE
         </div>
       </motion.div>

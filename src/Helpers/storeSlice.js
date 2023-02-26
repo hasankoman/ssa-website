@@ -2,14 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isMenuOpen: false,
+  show: false,
 };
 
 export const generalSlice = createSlice({
   name: "general",
   initialState,
   reducers: {
-    toggleIsMenuOpen: (state) => {
-      state.isMenuOpen = !state.isMenuOpen;
+    toggleIsMenuOpen: (state, action) => {
+      state.isMenuOpen = action.payload;
+    },
+    toggleShow: (state, action) => {
+      console.log(action.payload);
+      state.show = action.payload;
     },
     // incrementByAmount: (state, action) => {
     //   state.value += action.payload;
@@ -18,6 +23,7 @@ export const generalSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { toggleIsMenuOpen, incrementByAmount } = generalSlice.actions;
+export const { toggleIsMenuOpen, toggleShow, incrementByAmount } =
+  generalSlice.actions;
 
 export default generalSlice.reducer;
